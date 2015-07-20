@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airb22.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="teo-Bj-9M3">
+                                <rect key="frame" x="16" y="28" width="568" height="332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="teo-Bj-9M3" secondAttribute="height" multiplier="435:254" id="hDQ-UG-pQY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-jX-sd8">
+                                <rect key="frame" x="156" y="368" width="289" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Publish string to 'apns' channel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handlePublishButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YjA-eG-1DC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPG-fR-G6a">
+                                <rect key="frame" x="165" y="406" width="271" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Enable push for 'apns' channel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleEnablePushButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Di6-rQ-58e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-Tw-CDM">
+                                <rect key="frame" x="165" y="444" width="271" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Disable push on 'apns' channel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDisablePushButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsN-0P-mmZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH0-OG-wfP">
+                                <rect key="frame" x="174" y="482" width="253" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Disable push on all channels">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDisableAllPushButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5in-UY-9Hy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZx-JP-hLF">
+                                <rect key="frame" x="156" y="520" width="289" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Fetch channels with enabled push">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRequestPushEnabledButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyi-We-u8D"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUj-Tu-7Cw">
+                                <rect key="frame" x="16" y="558" width="568" height="22"/>
+                                <color key="backgroundColor" white="0.95929276315789469" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rY1-jX-sd8" firstAttribute="top" secondItem="teo-Bj-9M3" secondAttribute="bottom" constant="8" id="6Zf-ge-Yd6"/>
+                            <constraint firstItem="kPG-fR-G6a" firstAttribute="centerX" secondItem="rY1-jX-sd8" secondAttribute="centerX" id="6ae-eY-HHb"/>
+                            <constraint firstItem="TUj-Tu-7Cw" firstAttribute="centerX" secondItem="teo-Bj-9M3" secondAttribute="centerX" id="FM5-PP-QQc"/>
+                            <constraint firstItem="TUj-Tu-7Cw" firstAttribute="top" secondItem="oZx-JP-hLF" secondAttribute="bottom" constant="8" id="Hdv-pm-i8N"/>
+                            <constraint firstItem="teo-Bj-9M3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LqT-lW-HfH"/>
+                            <constraint firstItem="teo-Bj-9M3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TGq-kl-bOo"/>
+                            <constraint firstItem="TUj-Tu-7Cw" firstAttribute="width" secondItem="teo-Bj-9M3" secondAttribute="width" id="Y7o-vy-SJd"/>
+                            <constraint firstAttribute="centerX" secondItem="rY1-jX-sd8" secondAttribute="centerX" id="aNk-rT-60Z"/>
+                            <constraint firstItem="vcu-Tw-CDM" firstAttribute="top" secondItem="kPG-fR-G6a" secondAttribute="bottom" constant="8" id="bie-9I-DoO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TUj-Tu-7Cw" secondAttribute="bottom" constant="20" id="gBx-we-0Vo"/>
+                            <constraint firstItem="aH0-OG-wfP" firstAttribute="top" secondItem="vcu-Tw-CDM" secondAttribute="bottom" constant="8" id="grT-i3-PNb"/>
+                            <constraint firstItem="oZx-JP-hLF" firstAttribute="top" secondItem="aH0-OG-wfP" secondAttribute="bottom" constant="8" id="ldt-63-Zwo"/>
+                            <constraint firstItem="oZx-JP-hLF" firstAttribute="centerX" secondItem="aH0-OG-wfP" secondAttribute="centerX" id="mZ7-h2-ykx"/>
+                            <constraint firstItem="kPG-fR-G6a" firstAttribute="top" secondItem="rY1-jX-sd8" secondAttribute="bottom" constant="8" id="mbd-Kg-eNo"/>
+                            <constraint firstItem="kPG-fR-G6a" firstAttribute="centerX" secondItem="vcu-Tw-CDM" secondAttribute="centerX" constant="-0.5" id="olv-Yh-ALS"/>
+                            <constraint firstItem="vcu-Tw-CDM" firstAttribute="centerX" secondItem="aH0-OG-wfP" secondAttribute="centerX" constant="0.5" id="r1m-6D-6bJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="teo-Bj-9M3" secondAttribute="trailing" id="yvt-mK-hUh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="operationStatus" destination="TUj-Tu-7Cw" id="AqU-8Z-YLs"/>
+                        <outletCollection property="buttons" destination="kPG-fR-G6a" id="h05-Kf-THm"/>
+                        <outletCollection property="buttons" destination="vcu-Tw-CDM" id="tzF-2c-24Q"/>
+                        <outletCollection property="buttons" destination="aH0-OG-wfP" id="K8o-8P-bUE"/>
+                        <outletCollection property="buttons" destination="oZx-JP-hLF" id="gJZ-vU-Y8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airb22.jpg" width="600" height="351"/>
+    </resources>
+</document>
